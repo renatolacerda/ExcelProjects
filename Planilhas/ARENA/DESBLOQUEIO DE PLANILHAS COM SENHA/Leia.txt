@@ -1,0 +1,60 @@
+1- Abra sua planilha bloqueada
+
+2- Vá em Arquivo, e em seguida Salvar como
+
+3- Selecione um lugar de sua preferência, mude o tipo da planilha para: Pasta de Trabalho do Excel 97-2003 e salve-a
+
+4- Feito isso, feche a planilha antiga (a bloqueada) 
+
+5- Abra a planilha que você salvou antes
+
+6- Aperte Alt+F11, vá em Exibir e selecione a opção Código
+
+7- Após ter feito isso, aparecerá uma caixa de diálogo, cole o seguinte código nela:
+
+Sub DesprotegerPlanilha()
+
+Dim i As Integer, j As Integer, k As Integer
+Dim l As Integer, m As Integer, n As Integer
+On Error Resume Next
+For i = 65 To 66
+For j = 65 To 66
+For k = 65 To 66
+For l = 65 To 66
+For m = 65 To 66
+For i1 = 65 To 66
+For i2 = 65 To 66
+For i3 = 65 To 66
+For i4 = 65 To 66
+For i5 = 65 To 66
+For i6 = 65 To 66
+For n = 32 To 126
+ActiveSheet.Unprotect Chr(i) & Chr(j) & Chr(k) & _
+Chr(l) & Chr(m) & Chr(i1) & Chr(i2) & Chr(i3) & _
+Chr(i4) & Chr(i5) & Chr(i6) & Chr(n)
+If ActiveSheet.ProtectContents = False Then
+MsgBox "IntelExcel: Sua Planilha foi desbloqueada! "
+Exit Sub
+End If
+Next
+Next
+Next
+Next
+Next
+Next
+Next
+Next
+Next
+Next
+Next
+Next
+
+End Sub
+
+
+
+8- Clique em Arquivo e em salvar
+
+9- Agora vá em Exibição, Macros, Exibir Macros, selecione o DesprotegerPlanilha e em seguida executar
+
+10- Aparecerá uma caixa de dialogo informando que sua planilha foi desbloqueada. Pronto, já pode usar sua planilha!
